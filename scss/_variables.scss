@@ -6,3 +6,8 @@ $lightPink: hsla(341, 100%, 83%, 1);
 $white: hsla(0, 0%, 100%, 1);
 $gradientPurple: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
 $gradientPink: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+$gradientBg: linear-gradient(
+  180deg,
+  hsl(0, 0%, 100%) 0%,
+  hsl(236, 100%, 97%) 100%
+);

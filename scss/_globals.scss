@@ -14,8 +14,21 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
+  background: $gradientBg;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  color: $gray;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 img {
@@ -28,6 +41,116 @@ picture {
   width: 100%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 3.125rem;
+}
+
 .container {
   padding: 16px 20px;
+}
+
+.header {
+  position: relative;
+  margin: 36px 20px;
+
+  &__logo {
+    position: absolute;
+    top: auto;
+    left: 0;
+    fill: $darkBlue;
+  }
+
+  &__cta {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.hero {
+  margin-top: 50px;
+
+  &__text {
+    padding-bottom: 50px;
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__img {
+    width: 100vw;
+    margin-left: -20px;
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 80px;
+
+  .title-card {
+    background: $gradientPink;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    position: relative;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 60px 28px 40px 28px;
+
+    & img {
+      position: absolute;
+      margin-top: -80px;
+    }
+
+    & h2 {
+      font-size: 24px;
+      line-height: 32px;
+      color: white;
+    }
+
+    & h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $darkBlue;
+  padding: 36px 20px;
+
+  &__logo {
+    position: absolute;
+  }
+}
+
+.btn-1 {
+  background-color: $darkBlue;
+}
+
+.btn-2 {
+  background: $gradientPink;
+}
+
+.btn-3 {
+  background: $gradientPurple;
+}
+
+.hidden-mobile {
+  visibility: hidden;
 }

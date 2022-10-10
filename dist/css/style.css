@@ -13,8 +13,21 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 400;
+  background: linear-gradient(180deg, hsl(0deg, 0%, 100%) 0%, hsl(236deg, 100%, 97%) 100%);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  color: hsl(232deg, 10%, 56%);
+  font-size: 16px;
+  line-height: 26px;
 }
 
 img {
@@ -27,6 +40,105 @@ picture {
   width: 100%;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 24px;
+  border-radius: 3.125rem;
+}
+
 .container {
   padding: 16px 20px;
+}
+
+.header {
+  position: relative;
+  margin: 36px 20px;
+}
+.header__logo {
+  position: absolute;
+  top: auto;
+  left: 0;
+  fill: hsl(233deg, 54%, 16%);
+}
+.header__cta {
+  position: absolute;
+  right: 0;
+}
+
+.hero {
+  margin-top: 50px;
+}
+.hero__text {
+  padding-bottom: 50px;
+}
+.hero__text h1 {
+  font-size: 40px;
+}
+.hero__text p {
+  padding-bottom: 30px;
+}
+.hero__img {
+  width: 100vw;
+  margin-left: -20px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 80px;
+}
+.features .title-card {
+  background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.features__card {
+  position: relative;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 12px;
+  padding: 60px 28px 40px 28px;
+}
+.features__card img {
+  position: absolute;
+  margin-top: -80px;
+}
+.features__card h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: white;
+}
+.features__card h3 {
+  font-size: 20px;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(233deg, 54%, 16%);
+  padding: 36px 20px;
+}
+.footer__logo {
+  position: absolute;
+}
+
+.btn-1 {
+  background-color: hsl(233deg, 54%, 16%);
+}
+
+.btn-2 {
+  background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+}
+
+.btn-3 {
+  background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+}
+
+.hidden-mobile {
+  visibility: hidden;
 }
