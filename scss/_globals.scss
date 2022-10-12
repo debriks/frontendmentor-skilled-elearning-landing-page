@@ -9,6 +9,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  transition: all ease 0.2s;
 }
 
 body {
@@ -27,8 +28,8 @@ h3 {
 
 p {
   color: $gray;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1rem;
+  line-height: 1.625rem;
 }
 
 img {
@@ -42,21 +43,22 @@ picture {
 }
 
 a {
-  color: white;
-  text-decoration: none;
+  color: $brightPink;
   font-weight: 700;
-  font-size: 16px;
-  padding: 16px 24px;
-  border-radius: 3.125rem;
+  text-decoration: none;
 }
 
-.container {
-  padding: 16px 20px;
+.btn {
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 3.125rem;
 }
 
 .header {
   position: relative;
-  margin: 36px 20px;
+  margin: 2.25rem $paddingS20;
 
   &__logo {
     position: absolute;
@@ -68,60 +70,97 @@ a {
   &__cta {
     position: absolute;
     right: 0;
+
+    .btn-1 {
+      background-color: $darkBlue;
+
+      &:hover {
+        opacity: $opacityBtnHover;
+      }
+    }
   }
 }
 
+.container {
+  padding: 1rem $paddingS20;
+}
+
 .hero {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 
   &__text {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
+    max-width: 39rem;
+
     h1 {
-      font-size: 40px;
+      font-size: 2.5rem;
     }
 
     p {
-      padding-bottom: 30px;
+      padding-bottom: 1.875rem;
+    }
+
+    .btn-2 {
+      background: $gradientPink;
+      &:hover {
+        opacity: $opacityBtnHover;
+      }
     }
   }
 
-  &__img {
+  &__img img {
     width: 100vw;
-    margin-left: -20px;
+    margin: 0 auto;
+    z-index: -1;
   }
 }
 
 .features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  padding-bottom: 80px;
+  gap: 2.5rem;
+  padding-bottom: 5rem;
 
   .title-card {
     background: $gradientPink;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: $paddingCard30;
+    margin-bottom: $paddingCard30;
   }
 
   &__card {
     position: relative;
     background-color: $white;
     border-radius: 12px;
-    padding: 60px 28px 40px 28px;
+    padding: 3.75rem 1.75rem 2.5rem 1.75rem;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0rem 1.6rem 3.2rem rgba(102, 108, 163, 0.2);
+      transition: ease-in-out 0.3s;
+      transform: scale(1.02);
+    }
 
     & img {
       position: absolute;
-      margin-top: -80px;
+      margin-top: -5rem;
     }
 
     & h2 {
-      font-size: 24px;
-      line-height: 32px;
+      font-size: 1.5rem;
+      line-height: 2rem;
       color: white;
     }
 
     & h3 {
-      font-size: 20px;
+      font-size: 1.25rem;
+    }
+
+    & a {
+      color: $brightPink;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }
@@ -132,25 +171,193 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: $darkBlue;
-  padding: 36px 20px;
+  padding: 2.25rem 1.25rem;
 
   &__logo {
     position: absolute;
   }
-}
 
-.btn-1 {
-  background-color: $darkBlue;
-}
+  &__cta {
+    background: $gradientPurple;
 
-.btn-2 {
-  background: $gradientPink;
-}
-
-.btn-3 {
-  background: $gradientPurple;
+    &:hover {
+      background: $gradientPink;
+    }
+  }
 }
 
 .hidden-mobile {
   visibility: hidden;
+}
+
+.hidden-desktop {
+  visibility: visible;
+}
+
+// Tablet styles
+
+// 768px
+@media (min-width: 48rem) {
+  .header {
+    margin: 3rem 2.125rem;
+  }
+
+  .container {
+    padding: 1.5rem 2.125rem;
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 57fr 43fr;
+    margin: 7.5rem 0;
+
+    &__img img {
+      position: absolute;
+      top: -90%;
+      right: -48%;
+      z-index: -1;
+    }
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    row-gap: 3.5rem;
+
+    &__card {
+      height: 100%;
+    }
+  }
+
+  .footer {
+    padding: 2.25rem 2.125rem;
+  }
+}
+
+// Desktop styles - S
+
+// 1024px
+@media (min-width: 64rem) {
+  .hero {
+    grid-template-columns: 48fr 52fr;
+    margin: 7.5rem 0;
+
+    &__text {
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.125;
+        line-height: 1.75rem;
+      }
+    }
+
+    &__img img {
+      position: absolute;
+      width: 90%;
+      top: -100%;
+      right: -35%;
+      z-index: -1;
+    }
+  }
+}
+
+// Desktop styles - M
+
+// 1440px
+@media (min-width: 90rem) {
+  .container {
+    padding: 1rem 12.5rem;
+  }
+
+  .header {
+    position: relative;
+    margin: 2.25rem 12.5rem;
+    display: flex;
+    align-items: center;
+    padding-top: 0.875rem;
+  }
+
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    margin-top: 7.5rem;
+    margin-bottom: 15.625rem;
+
+    &__text {
+      p {
+        padding-right: 8.75rem;
+      }
+    }
+
+    &__img img {
+      position: absolute;
+      width: 62rem;
+      top: -100%;
+      right: -45%;
+    }
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    row-gap: 5rem;
+
+    &__card {
+      height: 100%;
+    }
+  }
+
+  .footer {
+    padding: 3.75rem 12.5rem;
+
+    &__cta {
+      position: absolute;
+      right: 12.5rem;
+    }
+  }
+
+  .hidden-mobile {
+    visibility: visible;
+  }
+
+  .hidden-desktop {
+    visibility: hidden;
+  }
+}
+
+// Desktop styles - L
+// 1700px
+@media (min-width: 106rem) {
+  .header {
+    margin: 2.25rem $paddingXl300;
+  }
+
+  .container {
+    padding: 1rem $paddingXl300;
+  }
+
+  .hero {
+    &__text {
+      h1 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 2rem;
+      }
+    }
+
+    &__img img {
+      width: 68.75rem;
+    }
+  }
+
+  .footer {
+    padding: 3.75rem $paddingXl300;
+  }
 }

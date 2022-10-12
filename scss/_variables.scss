@@ -1,9 +1,10 @@
-$lightBlue: hsla(234, 25%, 52%, 1);
-$darkBlue: hsla(233, 54%, 16%, 1);
+$lightBlue: rgb(102, 108, 163);
+$darkBlue: #13183f;
 $gray: hsla(232, 10%, 56%, 1);
 $brightPink: hsla(341, 92%, 62%, 1);
 $lightPink: hsla(341, 100%, 83%, 1);
 $white: hsla(0, 0%, 100%, 1);
+
 $gradientPurple: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
 $gradientPink: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
 $gradientBg: linear-gradient(
@@ -11,3 +12,9 @@ $gradientBg: linear-gradient(
   hsl(0, 0%, 100%) 0%,
   hsl(236, 100%, 97%) 100%
 );
+
+$opacityBtnHover: 0.7;
+
+$paddingXl300: 18.75rem;
+$paddingS20: 1.25rem;
+$paddingCard30: 1.875rem;
