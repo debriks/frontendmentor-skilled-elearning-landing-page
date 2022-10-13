@@ -58,13 +58,16 @@ a {
 
 .header {
   position: relative;
-  margin: 2.25rem $paddingS20;
+  margin: 2.75rem $paddingS20;
+  display: flex;
+  align-items: center;
 
   &__logo {
     position: absolute;
     top: auto;
     left: 0;
     fill: $darkBlue;
+    width: 84px;
   }
 
   &__cta {
@@ -176,6 +179,7 @@ a {
   &__logo {
     position: absolute;
     left: $paddingS20;
+    width: 84px;
   }
 
   &__cta {
@@ -187,14 +191,6 @@ a {
       background: $gradientPink;
     }
   }
-}
-
-.hidden-mobile {
-  visibility: hidden;
-}
-
-.hidden-desktop {
-  visibility: visible;
 }
 
 // Tablet styles
@@ -271,14 +267,6 @@ a {
       z-index: -1;
     }
   }
-
-  .hidden-mobile {
-    visibility: visible;
-  }
-
-  .hidden-desktop {
-    visibility: hidden;
-  }
 }
 
 // Desktop styles - M
@@ -295,6 +283,10 @@ a {
     display: flex;
     align-items: center;
     padding-top: 0.875rem;
+
+    &__logo {
+      width: 112px;
+    }
   }
 
   .hero {
@@ -333,6 +325,7 @@ a {
 
     &__logo {
       left: 12.5rem;
+      width: 112px;
     }
 
     &__cta {

@@ -57,13 +57,16 @@ a {
 
 .header {
   position: relative;
-  margin: 2.25rem 1.25rem;
+  margin: 2.75rem 1.25rem;
+  display: flex;
+  align-items: center;
 }
 .header__logo {
   position: absolute;
   top: auto;
   left: 0;
   fill: #13183f;
+  width: 84px;
 }
 .header__cta {
   position: absolute;
@@ -158,6 +161,7 @@ a {
 .footer__logo {
   position: absolute;
   left: 1.25rem;
+  width: 84px;
 }
 .footer__cta {
   background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
@@ -166,14 +170,6 @@ a {
 }
 .footer__cta:hover {
   background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
-}
-
-.hidden-mobile {
-  visibility: hidden;
-}
-
-.hidden-desktop {
-  visibility: visible;
 }
 
 @media (min-width: 48rem) and (max-width: 64rem) {
@@ -229,12 +225,6 @@ a {
     right: -35%;
     z-index: -1;
   }
-  .hidden-mobile {
-    visibility: visible;
-  }
-  .hidden-desktop {
-    visibility: hidden;
-  }
 }
 @media (min-width: 90rem) {
   .container {
@@ -246,6 +236,9 @@ a {
     display: flex;
     align-items: center;
     padding-top: 0.875rem;
+  }
+  .header__logo {
+    width: 112px;
   }
   .hero {
     position: relative;
@@ -276,6 +269,7 @@ a {
   }
   .footer__logo {
     left: 12.5rem;
+    width: 112px;
   }
   .footer__cta {
     right: 12.5rem;
