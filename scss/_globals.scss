@@ -274,19 +274,15 @@ a {
 // 1440px
 @media (min-width: 90rem) {
   .container {
-    padding: 1rem 12.5rem;
+    padding: 1rem $paddingXl260;
   }
 
   .header {
     position: relative;
-    margin: 2.25rem 12.5rem;
+    margin: 2.25rem $paddingXl260;
     display: flex;
     align-items: center;
     padding-top: 0.875rem;
-
-    &__logo {
-      width: 112px;
-    }
   }
 
   .hero {
@@ -318,18 +314,22 @@ a {
     &__card {
       height: 100%;
     }
+
+    .title-card {
+      h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
   }
 
   .footer {
-    padding: 3.75rem 12.5rem;
-
     &__logo {
-      left: 12.5rem;
-      width: 112px;
+      left: $paddingXl260;
     }
 
     &__cta {
-      right: 12.5rem;
+      right: $paddingXl260;
     }
   }
 }
@@ -338,11 +338,15 @@ a {
 // 1700px
 @media (min-width: 106rem) {
   .header {
-    margin: 2.25rem $paddingXl300;
+    margin: 2.25rem $paddingL300;
+
+    &__logo {
+      width: 112px;
+    }
   }
 
   .container {
-    padding: 1rem $paddingXl300;
+    padding: 1rem $paddingL300;
   }
 
   .hero {
@@ -363,14 +367,15 @@ a {
   }
 
   .footer {
-    padding: 3.75rem $paddingXl300;
+    padding: 3.75rem $paddingL300;
 
     &__logo {
-      left: $paddingXl300;
+      left: $paddingL300;
+      width: 112px;
     }
 
     &__cta {
-      right: $paddingXl300;
+      right: $paddingL300;
     }
   }
 }

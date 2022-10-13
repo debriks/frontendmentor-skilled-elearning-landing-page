@@ -228,17 +228,14 @@ a {
 }
 @media (min-width: 90rem) {
   .container {
-    padding: 1rem 12.5rem;
+    padding: 1rem 16.25rem;
   }
   .header {
     position: relative;
-    margin: 2.25rem 12.5rem;
+    margin: 2.25rem 16.25rem;
     display: flex;
     align-items: center;
     padding-top: 0.875rem;
-  }
-  .header__logo {
-    width: 112px;
   }
   .hero {
     position: relative;
@@ -264,20 +261,23 @@ a {
   .features__card {
     height: 100%;
   }
-  .footer {
-    padding: 3.75rem 12.5rem;
+  .features .title-card h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
   .footer__logo {
-    left: 12.5rem;
-    width: 112px;
+    left: 16.25rem;
   }
   .footer__cta {
-    right: 12.5rem;
+    right: 16.25rem;
   }
 }
 @media (min-width: 106rem) {
   .header {
     margin: 2.25rem 18.75rem;
+  }
+  .header__logo {
+    width: 112px;
   }
   .container {
     padding: 1rem 18.75rem;
@@ -297,6 +297,7 @@ a {
   }
   .footer__logo {
     left: 18.75rem;
+    width: 112px;
   }
   .footer__cta {
     right: 18.75rem;
