@@ -200,7 +200,7 @@ a {
 // Tablet styles
 
 // 768px
-@media (min-width: 48rem) {
+@media (min-width: 48rem) and (max-width: 64rem) {
   .header {
     margin: 3rem 2.125rem;
   }
@@ -271,6 +271,14 @@ a {
       z-index: -1;
     }
   }
+
+  .hidden-mobile {
+    visibility: visible;
+  }
+
+  .hidden-desktop {
+    visibility: hidden;
+  }
 }
 
 // Desktop styles - M
@@ -330,14 +338,6 @@ a {
     &__cta {
       right: 12.5rem;
     }
-  }
-
-  .hidden-mobile {
-    visibility: visible;
-  }
-
-  .hidden-desktop {
-    visibility: hidden;
   }
 }
 

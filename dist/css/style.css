@@ -176,7 +176,7 @@ a {
   visibility: visible;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48rem) and (max-width: 64rem) {
   .header {
     margin: 3rem 2.125rem;
   }
@@ -229,6 +229,12 @@ a {
     right: -35%;
     z-index: -1;
   }
+  .hidden-mobile {
+    visibility: visible;
+  }
+  .hidden-desktop {
+    visibility: hidden;
+  }
 }
 @media (min-width: 90rem) {
   .container {
@@ -273,12 +279,6 @@ a {
   }
   .footer__cta {
     right: 12.5rem;
-  }
-  .hidden-mobile {
-    visibility: visible;
-  }
-  .hidden-desktop {
-    visibility: hidden;
   }
 }
 @media (min-width: 106rem) {
