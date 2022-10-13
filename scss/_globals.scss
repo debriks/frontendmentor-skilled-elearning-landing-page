@@ -171,14 +171,17 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: $darkBlue;
-  padding: 2.25rem 1.25rem;
+  padding: 3.25rem 1.25rem;
 
   &__logo {
     position: absolute;
+    left: $paddingS20;
   }
 
   &__cta {
     background: $gradientPurple;
+    position: absolute;
+    right: $paddingS20;
 
     &:hover {
       background: $gradientPink;
@@ -231,7 +234,13 @@ a {
   }
 
   .footer {
-    padding: 2.25rem 2.125rem;
+    &__logo {
+      left: 2.125rem;
+    }
+
+    &__cta {
+      right: 2.125rem;
+    }
   }
 }
 
@@ -314,8 +323,11 @@ a {
   .footer {
     padding: 3.75rem 12.5rem;
 
+    &__logo {
+      left: 12.5rem;
+    }
+
     &__cta {
-      position: absolute;
       right: 12.5rem;
     }
   }
@@ -359,5 +371,13 @@ a {
 
   .footer {
     padding: 3.75rem $paddingXl300;
+
+    &__logo {
+      left: $paddingXl300;
+    }
+
+    &__cta {
+      right: $paddingXl300;
+    }
   }
 }

@@ -153,13 +153,16 @@ a {
   align-items: center;
   justify-content: space-between;
   background-color: #13183f;
-  padding: 2.25rem 1.25rem;
+  padding: 3.25rem 1.25rem;
 }
 .footer__logo {
   position: absolute;
+  left: 1.25rem;
 }
 .footer__cta {
   background: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+  position: absolute;
+  right: 1.25rem;
 }
 .footer__cta:hover {
   background: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
@@ -200,8 +203,11 @@ a {
   .features__card {
     height: 100%;
   }
-  .footer {
-    padding: 2.25rem 2.125rem;
+  .footer__logo {
+    left: 2.125rem;
+  }
+  .footer__cta {
+    right: 2.125rem;
   }
 }
 @media (min-width: 64rem) {
@@ -262,8 +268,10 @@ a {
   .footer {
     padding: 3.75rem 12.5rem;
   }
+  .footer__logo {
+    left: 12.5rem;
+  }
   .footer__cta {
-    position: absolute;
     right: 12.5rem;
   }
   .hidden-mobile {
@@ -292,5 +300,11 @@ a {
   }
   .footer {
     padding: 3.75rem 18.75rem;
+  }
+  .footer__logo {
+    left: 18.75rem;
+  }
+  .footer__cta {
+    right: 18.75rem;
   }
 }
